@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #7a0000, #ee012c);
+    font-family: monospace;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(16, 30px); /* Altere 20px para 30px aqui */
+    gap: 2px;
+    width: 480px; /* 30px * 16 colunas = 480px */
+}
+
+.board span {
+    display: block;
+    width: 30px; /* Altere 20px para 30px aqui */
+    height: 30px; /* Altere 20px para 30px aqui */
+    line-height: 30px; /* Altere 20px para 30px aqui */
+    text-align: center;
+    border: 1px solid #888;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ee0430;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #8b0000;
+}
+
+/* Escondendo o input file padrão */
+#fileInput {
+    display: none;
+}
+
+
+.board span.selected {
+    background-color: #ffb6c1; /* cor de fundo quando selecionado */
+    color: white; /* cor do texto quando selecionado */
+}
