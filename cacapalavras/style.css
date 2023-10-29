@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #7a0000, #ee012c);
+    background: linear-gradient(to bottom, #e57d90, #ffcdd4);
     font-family: monospace;
 }
 
@@ -28,7 +28,7 @@ body {
 .upload-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ee0430;
+    background-color: #ff71b5;
     color: white;
     border: none;
     border-radius: 5px;
@@ -37,7 +37,7 @@ body {
 }
 
 .upload-button:hover {
-    background-color: #8b0000;
+    background-color: #e57d90;
 }
 
 /* Escondendo o input file padrão */
@@ -47,6 +47,62 @@ body {
 
 
 .board span.selected {
-    background-color: #ffb6c1; /* cor de fundo quando selecionado */
+    background-color: #f99baa; /* cor de fundo quando selecionado */
     color: white; /* cor do texto quando selecionado */
 }
+
+.word-list {
+    margin-left: 90px; /* Adicionado margem à esquerda */
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.word-list h3 {
+    margin-top: 0;
+}
+
+.word-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.word-list li {
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: text-decoration 0.3s;
+}
+
+.word-list li:hover {
+    text-decoration: underline;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ajustado para alinhar ao topo */
+}
+
+.message {
+    max-width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.message p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.message p:last-child {
+    margin-bottom: 0;
+}
+

@@ -3,6 +3,8 @@ function createWordSearch(words) {
     let board = Array(boardSize).fill(null).map(() => Array(boardSize).fill(' '));
     let selectedWords = [];
 
+    
+
     // Seleciona 8 palavras aleatoriamente
     for (let i = 0; i < 8; i++) {
         let randomIndex = Math.floor(Math.random() * words.length);
@@ -13,6 +15,8 @@ function createWordSearch(words) {
         } else {
             i--;
         }
+        displayBoard(board);
+        displayWordList(selectedWords);
     }
 
     // Coloca as palavras selecionadas no tabuleiro
@@ -97,3 +101,16 @@ function displayBoard(board) {
 }
 
 
+
+function displayWordList(words) {
+    const wordListElem = document.getElementById('wordList');
+    wordListElem.innerHTML = '<h3>Palavras</h3><ul>';
+    
+    words.forEach(word => {
+        const listItem = document.createElement('li');
+        listItem.innerText = word;
+        wordListElem.querySelector('ul').appendChild(listItem);
+    });
+    
+    wordListElem.innerHTML += '</ul>';
+}
